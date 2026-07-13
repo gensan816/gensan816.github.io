@@ -14,6 +14,7 @@ class RncalationPlugin implements Plugin.PluginBase {
   filters: Filters | undefined = undefined;
   
   // Es vital activarlo en true ya que la web usa carga dinámica y sistema de cuentas
+  
   webStorageUtilized = true; 
 
   async popularNovels(
