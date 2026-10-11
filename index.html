@@ -4,200 +4,216 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="이재우 포트폴리오. 차량 보안·Physical AI 프로젝트, CTF, 논문, 교육 이력.">
+  <meta name="description" content="이재우 포트폴리오. AI를 활용한 보안 분석·자동화, 차량 보안·Physical AI 프로젝트, CTF, 논문, 교육 이력.">
   <meta property="og:title" content="이재우 | 포트폴리오">
-  <meta property="og:description" content="차량 보안 · Physical AI · 프로젝트 · CTF · 논문 · 교육사항">
+  <meta property="og:description" content="프로젝트 · CTF · 논문 · 교육사항">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mps0927.github.io/">
   <title>이재우 | 포트폴리오</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js" defer>
-</script>
+  <script src="./app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
   <div class="page" id="top">
     <header class="profile">
       <div class="profile-heading">
-<div>
-<h1>이재우 <span>Jaewoo Lee</span>
-</h1>
-<p class="profile-summary">차량 보안·Physical AI에 관심. 관련 분야 학습 중.</p>
-</div>
-<button class="print-button" id="print-summary">이력 저장 ↗</button>
-</div>
+        <div>
+          <h1>이재우 <span>Jaewoo Lee</span></h1>
+          <ul class="entry-list profile-summary">
+            <li>보안 분석과 자동화에 AI를 활용하는 방법에 특히 관심.</li>
+            <li>차량 보안·Physical AI와 AI 시스템의 보안도 함께 학습 중.</li>
+          </ul>
+        </div>
+        <button class="print-button" id="print-summary">이력 저장 ↗</button>
+      </div>
       <p class="profile-bio">단국대학교 소프트웨어학과 졸업.<br>BoB 15기 보안컨설팅 트랙 참여.</p>
       <div class="profile-links">
-<a href="https://github.com/mps0927" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-<a href="mailto:mps0927@gmail.com">mps0927@gmail.com</a>
-<button id="copy-email" aria-label="이메일 주소 복사">복사</button>
-<span id="copy-status" role="status">
-</span>
-</div>
+        <a href="https://github.com/mps0927" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="mailto:mps0927@gmail.com">mps0927@gmail.com</a>
+        <button id="copy-email" aria-label="이메일 주소 복사">복사</button>
+        <span id="copy-status" role="status"></span>
+      </div>
     </header>
     <nav class="navigation" aria-label="포트폴리오 목차">
-<a href="#projects">프로젝트</a>
-<a href="#ctf">CTF</a>
-<a href="#papers">논문</a>
-<a href="#education">교육사항</a>
-<a href="#activities">활동·자격</a>
-</nav>
+      <a href="#projects">프로젝트</a>
+      <a href="#ctf">CTF</a>
+      <a href="#papers">논문</a>
+      <a href="#education">교육사항</a>
+      <a href="#activities">활동·자격</a>
+    </nav>
 
     <main id="main">
       <section id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title">프로젝트</h2>
         <article class="project">
           <div class="entry-heading">
-<h3>차량용 UDS Fuzzer 개발</h3>
-<span class="date">2025</span>
-</div>
+            <h3>차량용 UDS Fuzzer 개발</h3>
+            <span class="date">2025</span>
+          </div>
           <p class="entry-context">WhiteHat School 3기 · 팀 프로젝트</p>
-          <p>Audi A5 실차 환경의 CAN·UDS 통신 분석. DTC와 Expected Response 기반 이상 수준 분류 및 UDS Fuzzer 개발.</p>
-          <dl class="project-info">
-<div>
-<dt>대상</dt>
-<dd>Audi A5 실차 환경</dd>
-</div>
-<div>
-<dt>기여</dt>
-<dd>UDS Fuzzer 개발, CAN 데이터 분석, DTC 기반 Fail Detection 단계 측정의 핵심 아이디어 제시</dd>
-</div>
-<div>
-<dt>기술</dt>
-<dd>Python, python-can, can-isotp, CAN, UDS</dd>
-</div>
-</dl>
+          <ul class="entry-list">
+            <li><strong>내용</strong> Audi A5 실차 ECU의 UDS 진단 인터페이스를 테스트하는 퍼저 개발.</li>
+            <li><strong>역할</strong> UDS Fuzzer 개발 및 CAN 송수신 데이터 분석. CAN ID–ECU–차량 기능 매핑.</li>
+            <li><strong>아이디어</strong> DTC를 활용한 Fail Detection 단계 측정의 핵심 아이디어 제시.</li>
+            <li><strong>차별점</strong> 진단 응답·테스트 전후 DTC 변화·Expected Response를 함께 확인하는 4단계 이상 수준 분류.</li>
+            <li><strong>기술</strong> CAN, ISO-TP, UDS, DTC.</li>
+            <li><strong>도구</strong> Python, python-can, can-isotp.</li>
+          </ul>
           <details>
-<summary>프로젝트 설명</summary>
-<div class="detail-body">
-<p>Audi A5 실차 환경의 진단 요청·응답 관찰. ECU별 UDS ID·지원 서비스 매핑 및 테스트 입력 구성.</p>
-<p>응답 유무, 테스트 전후 DTC 변화, Expected Response 수신 여부를 함께 확인하는 4단계 Fail Level 분류.</p>
-<p>개인 역할: UDS Fuzzer 개발·CAN 데이터 분석. DTC를 활용한 Fail Detection 단계 측정의 핵심 아이디어 제시.</p>
-<p>팀 실험: 약 3만 건의 테스트케이스 실행, 602건의 Fail 확인. Level 2·3 재현 실험에서 95% 이상의 재현율 기록. TARA를 활용한 차량 위협·위험도 검토.</p>
-</div>
-</details>
+            <summary>검증 방법·팀 결과</summary>
+            <div class="detail-body">
+              <ul class="entry-list">
+                <li>ECU 내부 상태를 직접 계측하기 어려운 실차 환경에서 진단 응답과 DTC를 통한 이상 관찰. ECU별 UDS ID·지원 서비스 분석 및 테스트 입력 구성.</li>
+                <li>팀 실험: 약 3만 건의 테스트케이스 실행, 602건의 Fail 확인. Level 2·3 재현 실험에서 95% 이상의 재현율 기록.</li>
+                <li>ISO/SAE 21434의 TARA를 활용한 차량 위협·위험도 분석.</li>
+              </ul>
+            </div>
+          </details>
         </article>
         <article class="project">
           <div class="entry-heading">
-<h3>임보디드 AI·Agent 공격 연구</h3>
-<div class="entry-meta">
-<span class="status">진행 중</span>
-<span class="date">2026</span>
-</div>
-</div>
+            <h3>Steer-by-Wire 조향 피드백 검증</h3>
+            <span class="date">2026</span>
+          </div>
+          <p class="entry-context">모비우스 SW 부트캠프 · AUTOSAR Classic 팀 PBL</p>
+          <ul class="entry-list">
+            <li><strong>내용</strong> AUTOSAR Classic 기반 조향 피드백·고속 통신 시나리오 구현·검증.</li>
+            <li><strong>역할</strong> 조향 피드백 메시지의 CRC 기반 통신 오류 검출 로직 구현.</li>
+            <li><strong>기술</strong> AUTOSAR Classic, SWC, RTE, CRC.</li>
+            <li><strong>도구·환경</strong> 현대오토에버 mobilgene Classic.</li>
+          </ul>
+        </article>
+        <article class="project">
+          <div class="entry-heading">
+            <h3>임보디드 AI·Agent 공격 연구</h3>
+            <div class="entry-meta">
+              <span class="status">진행 중</span>
+              <span class="date">2026</span>
+            </div>
+          </div>
           <p class="entry-context">BoB 15기 보안컨설팅 · 팀 프로젝트</p>
-          <p>임보디드 AI·Agent 시스템의 새로운 공격 벡터·공격 방법론 연구 중.</p>
-          <dl class="project-info">
-<div>
-<dt>담당</dt>
-<dd>새로운 공격 벡터와 재현 가능한 공격 방법론 탐색</dd>
-</div>
-<div>
-<dt>분야</dt>
-<dd>Physical AI, AI Agent Security, Adversarial Research</dd>
-</div>
-</dl>
-          <details>
-<summary>프로젝트 설명</summary>
-<div class="detail-body">
-<p>Physical AI와 AI Agent의 인식·계획·행동 과정 분석. 공격 관점의 새로운 벡터·방법론 탐색 및 실험 환경 검토 중.</p>
-</div>
-</details>
+          <ul class="entry-list">
+            <li><strong>내용</strong> Physical AI·AI Agent의 인식·계획·행동 과정에 대한 보안 연구.</li>
+            <li><strong>역할</strong> 새로운 공격 벡터·공격 방법론 탐색 및 실험 설계 중.</li>
+            <li><strong>기술·방법</strong> AI Agent 동작 흐름 분석, 공격 표면 분석 및 재현 실험 검토 중.</li>
+          </ul>
         </article>
       </section>
 
       <section id="ctf" aria-labelledby="ctf-title">
         <h2 id="ctf-title">CTF</h2>
         <div class="table-scroll">
-<table class="ctf-table">
-<caption class="sr-only">CTF 대회 성과</caption>
-<thead>
-<tr>
-<th scope="col">연도</th>
-<th scope="col">대회</th>
-<th scope="col">결과</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="date">2025</td>
-<td>
-<strong>LISAthon (리사톤)</strong>
-<span class="cell-description">순천향대학교 · 모빌리티 사이버보안 대회</span>
-</td>
-<td>
-<span class="result">본선 진출</span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+          <table class="ctf-table">
+            <caption class="sr-only">CTF 대회 성과</caption>
+            <thead>
+              <tr>
+                <th scope="col">연도</th>
+                <th scope="col">대회</th>
+                <th scope="col">결과</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="date">2025</td>
+                <td>
+                  <strong>LISAthon (리사톤)</strong>
+                  <span class="cell-description">순천향대학교 · 모빌리티 사이버보안 대회</span>
+                </td>
+                <td><span class="result">본선 진출</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section id="papers" aria-labelledby="papers-title">
         <h2 id="papers-title">논문</h2>
         <article class="paper">
-<div class="entry-heading">
-<h3>실차 환경 UDS 퍼징을 위한<br class="paper-break"> DTC 기반 다층적 Fail Detection 기법</h3>
-<span class="date">2026.05</span>
-</div>
-<p class="entry-context">한국자동차공학회 2026 춘계학술대회 논문집 · 공동저자</p>
-<a class="paper-link" href="https://ksae.org/journal_list/search_index.php?mode=view&amp;sid=59409" target="_blank" rel="noopener noreferrer">한국자동차공학회 ↗</a>
-<a class="paper-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12895372" target="_blank" rel="noopener noreferrer">DBpia ↗</a>
-</article>
+          <div class="entry-heading">
+            <h3>실차 환경 UDS 퍼징을 위한<br class="paper-break"> DTC 기반 다층적 Fail Detection 기법</h3>
+            <span class="date">2026.05</span>
+          </div>
+          <p class="entry-context">한국자동차공학회 2026 춘계학술대회 논문집 · 공동저자</p>
+          <ul class="entry-list">
+            <li>실차 UDS 퍼징 결과의 이상 수준을 진단 응답·DTC 변화로 구분하는 Fail Detection 기법.</li>
+          </ul>
+          <a class="paper-link" href="https://ksae.org/journal_list/search_index.php?mode=view&amp;sid=59409" target="_blank" rel="noopener noreferrer">한국자동차공학회 ↗</a>
+          <a class="paper-link" href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12895372" target="_blank" rel="noopener noreferrer">DBpia ↗</a>
+        </article>
       </section>
 
       <section id="education" aria-labelledby="education-title">
         <h2 id="education-title">교육사항</h2>
         <h3 class="subheading">학력</h3>
         <article class="degree">
-<div class="entry-heading">
-<h4>단국대학교</h4>
-<span class="date">2020.03 — 2026.02</span>
-</div>
-<p>SW융합대학 소프트웨어학과 · 공학사 · 졸업</p>
-<p class="gpa">학점 <strong>3.96 / 4.5</strong>
-</p>
-<p class="degree-courses">컴퓨터네트워크, 운영체제보안, 정보보호이론, 시큐어코딩 등 이수</p>
-</article>
+          <div class="entry-heading">
+            <h4>단국대학교</h4>
+            <span class="date">2020.03 — 2026.02</span>
+          </div>
+          <p>SW융합대학 소프트웨어학과 · 공학사 · 졸업</p>
+          <p class="gpa">학점 <strong>3.96 / 4.5</strong></p>
+          <ul class="entry-list degree-courses">
+            <li>컴퓨터네트워크, 운영체제보안, 정보보호이론, 모바일보안, 시큐어코딩 등 이수.</li>
+          </ul>
+        </article>
         <h3 class="subheading course-heading">교육·부트캠프</h3>
         <div class="education-list">
           <article class="education-entry">
-<div class="education-date">2026.07 — 현재</div>
-<div>
-<div class="education-title">
-<h4>Best of the Best 15기</h4>
-<span class="status">교육 중</span>
-</div>
-<p class="entry-context">보안컨설팅 트랙</p>
-<p>개인정보 관리체계 진단, 보안체계 제안, 침해사고 대응·위협 분석 실습.<br>임보디드 AI·Agent 시스템의 새로운 공격 벡터·공격 방법론 연구 중.</p>
-</div>
-</article>
+            <div class="education-date">2026.07 — 현재</div>
+            <div>
+              <div class="education-title">
+                <h4>Best of the Best 15기</h4>
+                <span class="status">교육 중</span>
+              </div>
+              <p class="entry-context">한국정보기술연구원(KITRI) · 보안컨설팅 트랙</p>
+              <ul class="entry-list">
+                <li><strong>방법론</strong> 개인정보 관리체계 진단, 보안체계 제안, 침해사고 대응·위협 분석 실습.</li>
+                <li><strong>프로젝트</strong> 임보디드 AI·Agent 시스템의 공격 벡터·공격 방법론 연구 중.</li>
+                <li><strong>역할</strong> 새로운 공격 벡터 탐색 및 재현 방법 검토 중.</li>
+              </ul>
+            </div>
+          </article>
           <article class="education-entry">
-<div class="education-date">2025.09 — 2026.03</div>
-<div>
-<h4>모비우스 SW 부트캠프 1기</h4>
-<p class="entry-context">현대모비스 · 멋쟁이사자처럼</p>
-<p>자동차 구조·차량 SW, C·운영체제, AUTOSAR 기반 차량 SW 개발 학습. 시나리오 기반 PBL 수행.<br>AUTOSAR Classic PBL 팀원. Steer-by-Wire 조향 피드백·고속 통신 시나리오 구현·검증 참여.</p>
-</div>
-</article>
+            <div class="education-date">2025.09 — 2026.03</div>
+            <div>
+              <h4>모비우스 SW 부트캠프 1기</h4>
+              <p class="entry-context">현대모비스 · 멋쟁이사자처럼</p>
+              <ul class="entry-list">
+                <li><strong>기술</strong> C·운영체제, 자동차 구조·차량 SW, AUTOSAR Classic의 SWC·RTE·ECU 구성·통합·검증 학습.</li>
+                <li><strong>도구·실습</strong> 현대오토에버 mobilgene Classic 활용. AUTOSAR OS의 Task·Event·Alarm 설정 및 RTE Task Mapping 학습.</li>
+                <li><strong>프로젝트</strong> Steer-by-Wire 조향 피드백·고속 통신 시나리오 PBL 참여.</li>
+                <li><strong>역할</strong> 조향 피드백 메시지의 CRC 기반 통신 오류 검출 로직 구현.</li>
+              </ul>
+            </div>
+          </article>
           <article class="education-entry">
-<div class="education-date">2025.08.20 — 08.22</div>
-<div>
-<h4>IoT 보안인증 심화교육</h4>
-<p class="entry-context">한국정보보호교육센터(KISEC)</p>
-<p>펌웨어 추출·정적 분석 실습. IoT 보안인증 관점의 취약점 점검 학습.</p>
-</div>
-</article>
+            <div class="education-date">2025.08.20 — 08.22</div>
+            <div>
+              <h4>IoT 보안인증 심화교육</h4>
+              <p class="entry-context">한국인터넷진흥원(KISA) · 한국정보보호교육센터(KISEC)</p>
+              <ul class="entry-list">
+                <li><strong>방법론</strong> IoT 보안인증 기준에 따른 보안시험·취약점 분석 학습.</li>
+                <li><strong>Binwalk</strong> 펌웨어 구조 확인 및 파일시스템 추출 실습.</li>
+                <li><strong>Firmwalker</strong> 추출한 파일시스템의 설정 파일·보안 점검 항목 검색.</li>
+                <li><strong>Ghidra·IDA</strong> 펌웨어 바이너리 정적 분석·리버스 엔지니어링 실습.</li>
+              </ul>
+            </div>
+          </article>
           <article class="education-entry">
-<div class="education-date">2025.03 — 2025.09</div>
-<div>
-<h4>WhiteHat School 3기</h4>
-<p class="entry-context">한국정보기술연구원(KITRI)</p>
-<p>정보보안 기초, 커넥티드카·CAN 통신, ISO/SAE 21434·TARA 학습. 실습형 팀 프로젝트 참여.<br>Audi A5 실차 환경의 CAN·UDS 통신 분석. TARA 및 UDS Fuzzer 개발 수행.</p>
-</div>
-</article>
+            <div class="education-date">2025.03 — 2025.09</div>
+            <div>
+              <h4>WhiteHat School 3기</h4>
+              <p class="entry-context">한국정보기술연구원(KITRI)</p>
+              <ul class="entry-list">
+                <li><strong>기술</strong> 시스템·웹·모바일 보안 기초, CAN·ISO-TP·UDS 진단 통신 학습.</li>
+                <li><strong>방법론</strong> ISO/SAE 21434·TARA 기반 차량 위협·위험 분석.</li>
+                <li><strong>도구</strong> Python, python-can, can-isotp 활용.</li>
+                <li><strong>프로젝트·역할</strong> Audi A5 대상 UDS Fuzzer 개발·CAN 데이터 분석. DTC 기반 Fail Detection 단계 측정 아이디어 제시.</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -205,27 +221,30 @@
         <h2 id="activities-title">활동·자격</h2>
         <div class="activity-list">
           <article class="activity">
-<div class="entry-heading">
-<h3>단국대학교 보안·개발 동아리 Aegis</h3>
-<span class="entry-label">동아리</span>
-</div>
-<p>보안 TechTalk, Dreamhack 문제풀이 스터디·CTF, 코딩교육 봉사 활동</p>
-<p class="entry-context">회원: 2021.03 — 2022.02, 2024.03 — 2025.08<br>봉사활동 담당 임원: 2024.03 — 2025.03</p>
-</article>
+            <div class="entry-heading">
+              <h3>단국대학교 보안·개발 동아리 Aegis</h3>
+              <span class="entry-label">동아리</span>
+            </div>
+            <ul class="entry-list">
+              <li>보안 TechTalk, Dreamhack 문제풀이 스터디·CTF, 코딩교육 봉사 활동.</li>
+              <li>회원: 2021.03 — 2022.02, 2024.03 — 2025.08.</li>
+              <li>봉사활동 담당 임원: 2024.03 — 2025.03.</li>
+            </ul>
+          </article>
           <article class="activity">
-<div class="entry-heading">
-<h3>네트워크관리사 2급</h3>
-<span class="date">2021.12</span>
-</div>
-<p class="entry-context">한국정보통신자격협회</p>
-</article>
+            <div class="entry-heading">
+              <h3>네트워크관리사 2급</h3>
+              <span class="date">2021.12</span>
+            </div>
+            <p class="entry-context">한국정보통신자격협회</p>
+          </article>
         </div>
       </section>
     </main>
     <footer>
-<span>© <span id="year">2026</span> 이재우</span>
-<a href="#top">맨 위로 ↑</a>
-</footer>
+      <span>© <span id="year">2026</span> 이재우</span>
+      <a href="#top">맨 위로 ↑</a>
+    </footer>
   </div>
 </body>
 </html>
