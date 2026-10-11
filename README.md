@@ -20,6 +20,8 @@
 
 콘텐츠 수정: `index.html` 편집.
 
+GitHub 웹에서 문구 수정: [빠른 수정 안내](./EDITING.md) · [index.html 바로 수정](https://github.com/mps0927/mps0927.github.io/edit/main/index.html)
+
 ## Local preview
 
 `index.html`을 브라우저에서 열기. 로컬 서버 이용 시 아래 명령 실행.
