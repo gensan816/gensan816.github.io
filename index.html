@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="이재우의 포트폴리오. 프로젝트, CTF, 논문, 학력과 교육사항을 정리했습니다.">
+  <meta name="description" content="이재우의 포트폴리오. 차량 보안과 Physical AI에 관한 프로젝트, CTF, 논문, 교육 이력을 정리했습니다.">
   <meta property="og:title" content="이재우 | 포트폴리오">
-  <meta property="og:description" content="프로젝트 · CTF · 논문 · 교육사항">
+  <meta property="og:description" content="차량 보안 · Physical AI · 프로젝트 · CTF · 논문 · 교육사항">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mps0927.github.io/">
   <title>이재우 | 포트폴리오</title>
@@ -18,8 +18,8 @@
   <a class="skip-link" href="#main">본문으로 이동</a>
   <div class="page" id="top">
     <header class="profile">
-      <div class="profile-heading"><div><h1>이재우 <span>Jaewoo Lee</span></h1><p class="profile-summary">차량 보안 · AI 에이전트 안전 연구</p></div><button class="print-button" id="print-summary">이력 저장 ↗</button></div>
-      <p class="profile-bio">단국대학교 소프트웨어학과 졸업.<br>BoB 15기 보안컨설팅 트랙에서 임보디드 AI 안전 필터를 연구하고 있습니다.</p>
+      <div class="profile-heading"><div><h1>이재우 <span>Jaewoo Lee</span></h1><p class="profile-summary">차량 보안과 Physical AI에 관심을 두고 공부하고 있습니다.</p></div><button class="print-button" id="print-summary">이력 저장 ↗</button></div>
+      <p class="profile-bio">단국대학교 소프트웨어학과 졸업.<br>BoB 15기 보안컨설팅 트랙에 참여하고 있습니다.</p>
       <div class="profile-links"><a href="https://github.com/mps0927" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:mps0927@gmail.com">mps0927@gmail.com</a><button id="copy-email" aria-label="이메일 주소 복사">복사</button><span id="copy-status" role="status"></span></div>
     </header>
     <nav class="navigation" aria-label="포트폴리오 목차"><a href="#projects">프로젝트</a><a href="#ctf">CTF</a><a href="#papers">논문</a><a href="#education">교육사항</a><a href="#activities">활동·자격</a></nav>
@@ -30,16 +30,16 @@
         <article class="project">
           <div class="entry-heading"><h3>차량용 UDS Fuzzer 개발</h3><span class="date">2025</span></div>
           <p class="entry-context">WhiteHat School 3기 · 팀 프로젝트</p>
-          <p>실차 환경에서 CAN·UDS 통신을 분석하고, DTC 응답을 활용해 이상 수준을 구분하는 퍼저를 개발했습니다.</p>
-          <dl class="project-info"><div><dt>담당</dt><dd>CAN ID–ECU–차량 기능 매핑, 퍼징 Workflow 설계, DTC 기반 다층적 Fail Detection 아이디어 제안·설계</dd></div><div><dt>기술</dt><dd>Python, python-can, can-isotp, CAN, UDS</dd></div></dl>
-          <details><summary>프로젝트 설명</summary><div class="detail-body"><p>ECU 내부 상태를 직접 관찰하기 어려운 실차 환경에서 진단 응답과 DTC 변화로 이상을 판단하는 방법을 검토했습니다. 차량 통신을 분석하고 테스트 흐름과 Fail Detection 수준 구분을 설계했습니다.</p><p>TARA를 통해 차량의 위협과 위험을 검토하는 경험도 쌓았습니다.</p></div></details>
+          <p>Audi A5 실차 환경에서 CAN·UDS 통신을 분석하고, DTC와 Expected Response로 이상 수준을 분류하는 퍼저를 개발했습니다.</p>
+          <dl class="project-info"><div><dt>대상</dt><dd>Audi A5 실차 환경</dd></div><div><dt>기여</dt><dd>UDS Fuzzer 개발, CAN 데이터 분석, DTC 기반 Fail Detection 단계 측정의 핵심 아이디어 제시</dd></div><div><dt>기술</dt><dd>Python, python-can, can-isotp, CAN, UDS</dd></div></dl>
+          <details><summary>프로젝트 설명</summary><div class="detail-body"><p>Audi A5 실차 환경에서 진단 요청과 응답을 관찰해 ECU별 UDS ID와 지원 서비스를 매핑하고, 이를 바탕으로 테스트 입력을 구성했습니다. 단순한 응답 유무 대신 테스트 전후 DTC 변화와 Expected Response 수신 여부를 함께 확인해 이상을 4단계 Fail Level로 분류했습니다.</p><p>저는 UDS Fuzzer 개발과 CAN 데이터 분석을 맡았고, DTC를 활용해 Fail Detection 단계를 측정하는 핵심 아이디어를 제시했습니다. 팀 실험에서는 약 3만 건의 테스트케이스를 실행해 602건의 Fail을 확인했고, Level 2·3 재현 실험에서 95% 이상의 재현율을 기록했습니다. TARA를 통해 차량의 위협과 위험도도 검토했습니다.</p></div></details>
         </article>
         <article class="project">
-          <div class="entry-heading"><h3>임보디드 AI·Agent 안전 필터</h3><div class="entry-meta"><span class="status">진행 중</span><span class="date">2026</span></div></div>
+          <div class="entry-heading"><h3>임보디드 AI·Agent 공격 연구</h3><div class="entry-meta"><span class="status">진행 중</span><span class="date">2026</span></div></div>
           <p class="entry-context">BoB 15기 보안컨설팅 · 팀 프로젝트</p>
-          <p>AI 에이전트가 장면을 해석하고 행동을 실행하는 과정에서 작업 범위와 안전 조건을 점검하는 필터를 연구하고 있습니다.</p>
-          <dl class="project-info"><div><dt>담당</dt><dd>안전 필터 제작, 계획·행동 단계의 검사 기준과 Gate 설계</dd></div><div><dt>분야</dt><dd>Embodied AI, AI Agent, Safety Filter</dd></div></dl>
-          <details><summary>프로젝트 설명</summary><div class="detail-body"><p>장면에서 계획, 행동으로 이어지는 경로를 검토하고 실행 전에 필터로 점검하는 솔루션입니다. 팀에서 필터 제작을 담당하며 설계·구현·검증을 진행하고 있습니다.</p></div></details>
+          <p>임보디드 AI·Agent 시스템을 대상으로 새로운 공격 벡터와 공격 방법론을 연구하고 있습니다.</p>
+          <dl class="project-info"><div><dt>연구 내용</dt><dd>새로운 공격 벡터와 재현 가능한 공격 방법론 탐색</dd></div><div><dt>분야</dt><dd>Physical AI, AI Agent Security, Adversarial Research</dd></div></dl>
+          <details><summary>프로젝트 설명</summary><div class="detail-body"><p>Physical AI와 AI Agent가 인식·계획·행동으로 이어지는 과정을 공격 관점에서 살펴보고 있습니다. 새로운 공격 벡터와 방법론을 찾고, 실험 환경에서 검토하는 중입니다.</p></div></details>
         </article>
       </section>
 
@@ -59,19 +59,18 @@
         <article class="degree"><div class="entry-heading"><h4>단국대학교</h4><span class="date">2020.03 — 2026.02</span></div><p>SW융합대학 소프트웨어학과 · 공학사 · 졸업</p><p class="gpa">학점 <strong>3.96 / 4.5</strong></p><p class="degree-courses">컴퓨터네트워크, 운영체제보안, 정보보호이론, 시큐어코딩 등 이수</p></article>
         <h3 class="subheading course-heading">교육·부트캠프</h3>
         <div class="education-list">
-          <article class="education-entry"><div class="education-date">2026.07 — 현재</div><div><div class="education-title"><h4>Best of the Best 15기</h4><span class="status">교육 중</span></div><p class="entry-context">보안컨설팅 트랙</p><p>임보디드 AI·Agent 필터 솔루션 프로젝트</p></div></article>
-          <article class="education-entry"><div class="education-date">2025.09 — 2026.03</div><div><h4>모비우스 SW 부트캠프 1기</h4><p class="entry-context">현대모비스 · 멋쟁이사자처럼</p><p>AUTOSAR Classic 기반 SDV ECU 구성·통합·검증 학습.<br>Steer-by-Wire 조향 피드백·고속 통신 PBL 참여.</p></div></article>
-          <article class="education-entry"><div class="education-date">2025.08.20 — 08.22</div><div><h4>IoT 보안인증 심화교육</h4><p class="entry-context">21시간</p><p>펌웨어 추출 및 정적 분석 실습</p></div></article>
-          <article class="education-entry"><div class="education-date">2025.03 — 2025.09</div><div><h4>WhiteHat School 3기</h4><p>시스템·웹·모바일 보안 기초, CAN 실습, TARA, UDS 퍼저 개발</p></div></article>
+          <article class="education-entry"><div class="education-date">2026.07 — 현재</div><div><div class="education-title"><h4>Best of the Best 15기</h4><span class="status">교육 중</span></div><p class="entry-context">보안컨설팅 트랙</p><p>개인정보 관리체계 진단, 보안체계 제안, 침해사고 대응과 위협 분석을 실습했습니다.<br>임보디드 AI·Agent 시스템의 새로운 공격 벡터와 공격 방법론을 연구하는 프로젝트를 진행 중입니다.</p></div></article>
+          <article class="education-entry"><div class="education-date">2025.09 — 2026.03</div><div><h4>모비우스 SW 부트캠프 1기</h4><p class="entry-context">현대모비스 · 멋쟁이사자처럼</p><p>자동차 구조와 차량 SW, C·운영체제, AUTOSAR 기반 차량 SW 개발을 배우고 시나리오 기반 PBL을 수행했습니다.<br>AUTOSAR Classic PBL 팀원으로 Steer-by-Wire 조향 피드백과 고속 통신 시나리오 구현·검증에 참여했습니다.</p></div></article>
+          <article class="education-entry"><div class="education-date">2025.08.20 — 08.22</div><div><h4>IoT 보안인증 심화교육</h4><p class="entry-context">한국정보보호교육센터(KISEC)</p><p>펌웨어 추출과 정적 분석을 실습하며, IoT 보안인증 관점의 취약점 점검을 학습했습니다.</p></div></article>
+          <article class="education-entry"><div class="education-date">2025.03 — 2025.09</div><div><h4>WhiteHat School 3기</h4><p class="entry-context">한국정보기술연구원(KITRI)</p><p>정보보안 기초와 커넥티드카·CAN 통신, ISO/SAE 21434, TARA를 학습하고 실습형 팀 프로젝트에 참여했습니다.<br>Audi A5 실차 환경에서 CAN·UDS 통신을 분석하고 TARA와 UDS Fuzzer 개발을 수행했습니다.</p></div></article>
         </div>
       </section>
 
       <section id="activities" aria-labelledby="activities-title">
         <h2 id="activities-title">활동·자격</h2>
         <div class="activity-list">
-          <article class="activity"><div class="entry-heading"><h3>단국대학교 보안·개발 동아리 Aegis</h3><span class="entry-label">동아리</span></div><p>보안 TechTalk, Dreamhack 문제풀이 스터디·CTF, 코딩교육 봉사 활동</p><p class="entry-context">2024.01 — 2025.01 · 봉사활동 담당 임원</p></article>
+          <article class="activity"><div class="entry-heading"><h3>단국대학교 보안·개발 동아리 Aegis</h3><span class="entry-label">동아리</span></div><p>보안 TechTalk, Dreamhack 문제풀이 스터디·CTF, 코딩교육 봉사 활동</p><p class="entry-context">회원: 2021.03 — 2022.02, 2024.03 — 2025.08<br>봉사활동 담당 임원: 2024.03 — 2025.03</p></article>
           <article class="activity"><div class="entry-heading"><h3>네트워크관리사 2급</h3><span class="date">2021.12</span></div><p class="entry-context">한국정보통신자격협회</p></article>
-          <article class="activity"><div class="entry-heading"><h3>TOEIC Speaking</h3><span class="date">2025.11</span></div><p class="entry-context">Intermediate Mid 3 (IM3)</p></article>
         </div>
       </section>
     </main>
