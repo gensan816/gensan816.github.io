@@ -1,6 +1,6 @@
 # 이재우 | Jaewoo Lee
 
-차량 보안과 Physical AI에 관심을 두고 공부하고 있습니다.
+차량 보안·Physical AI에 관심. 관련 분야 학습 중.
 
 [포트폴리오 보기](https://mps0927.github.io/) · [GitHub](https://github.com/mps0927)
 
@@ -18,19 +18,19 @@
 - `app.js`: 이메일 복사와 이력 저장 기능
 - `favicon.svg`: 사이트 아이콘
 
-내용을 수정할 때는 주로 `index.html`을 편집하면 됩니다.
+콘텐츠 수정: `index.html` 편집.
 
 ## Local preview
 
-`index.html`을 브라우저에서 열거나, 아래 명령으로 로컬 서버를 실행할 수 있습니다.
+`index.html`을 브라우저에서 열기. 로컬 서버 이용 시 아래 명령 실행.
 
 ```powershell
 python -m http.server 8000
 ```
 
-그다음 [localhost:8000](http://localhost:8000/)을 열면 됩니다.
+[localhost:8000](http://localhost:8000/) 접속.
 
 ## Deploy
 
-GitHub Pages는 `main` 브랜치의 루트 폴더를 게시합니다.
-`main`에 변경사항을 올리면 사이트에 반영됩니다.
+GitHub Pages 배포: `main` 브랜치의 루트 폴더 게시.
+`main` 변경사항 자동 반영.
