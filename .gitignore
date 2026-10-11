@@ -1,0 +1,15 @@
+# Local files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.preview/
+.cache/
+node_modules/
+*.log
+
+# Credentials
+.env
+.env.*
+!.env.example

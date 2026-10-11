@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f0">
+  <meta name="description" content="이재우의 보안 포트폴리오. 차량 UDS 퍼징, 임보디드 AI 안전 필터, 2025 LISAthon 본선 진출과 보안 교육 이력을 소개합니다.">
+  <meta property="og:title" content="이재우 | Security Portfolio">
+  <meta property="og:description" content="차량 보안에서 AI 에이전트 안전까지. 이재우의 프로젝트와 연구, 교육 이력.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mps0927.github.io/">
+  <title>이재우 · Jaewoo Lee | Security Portfolio</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="이재우 포트폴리오 홈"><span class="brand-mark">jl<span>_</span></span><span>Jaewoo Lee</span></a>
+    <nav aria-label="주요 메뉴"><a href="#projects">프로젝트</a><a href="#education">교육</a><a href="#highlights">활동·성과</a></nav>
+    <div class="header-actions"><button class="theme-toggle" id="theme-toggle" aria-label="어두운 테마로 전환" aria-pressed="false"><span aria-hidden="true">◐</span></button><a class="contact-link" href="#contact">연락하기 <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> SECURITY ENGINEERING · RESEARCH</p>
+        <p class="name">이재우 <span>/ Jaewoo Lee</span></p>
+        <h1 id="hero-title">안전한 시스템을<br>설계하고<br><em>검증합니다.</em></h1>
+        <p class="hero-description">차량 진단 통신의 이상을 관찰하고,<br class="desktop-br"> AI 에이전트의 행동을 실행 전에 점검합니다.<br>코드와 실험, 근거를 바탕으로 보안을 연구합니다.</p>
+        <div class="hero-buttons"><a class="button primary" href="#projects">프로젝트 살펴보기 <span aria-hidden="true">↘</span></a><a class="button text-button" href="https://github.com/mps0927" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="research-visual" aria-label="차량 보안과 AI 안전 연구를 연결한 그래픽">
+        <div class="visual-top"><span>RESEARCH MAP / 01</span><span class="visual-dot"></span></div>
+        <svg class="system-map" viewBox="0 0 480 450" role="img" aria-labelledby="map-title">
+          <title id="map-title">차량 진단과 AI 행동 검증을 연결하는 보안 연구</title>
+          <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#bed8b0" opacity=".16"/></pattern></defs>
+          <rect width="480" height="450" fill="url(#grid)"/>
+          <g fill="none" stroke="#a7d497"><circle cx="240" cy="218" r="154" opacity=".16"/><circle cx="240" cy="218" r="112" opacity=".3" stroke-dasharray="3 9"/><path d="M240 24v46M240 371v46M44 218h44M394 218h44" opacity=".35"/><path d="M128 113l36 30M350 327l-38-30M128 327l36-30M350 113l-38 30" opacity=".25"/></g>
+          <path d="M240 132l70 28v69c0 47-47 82-70 95-23-13-70-48-70-95v-69z" fill="#b9e89e" fill-opacity=".06" stroke="#b9e89e" stroke-width="1.5"/>
+          <path d="M212 225l20 21 42-47" fill="none" stroke="#c5efa7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="none" stroke="#8fbc80" stroke-width="1"><path d="M93 112h42l35 48"/><path d="M387 118h-48l-29 42"/><path d="M103 326h51l35-35"/><path d="M387 327h-59l-29-27"/></g>
+          <g fill="#c5efa7"><circle cx="93" cy="112" r="4"/><circle cx="387" cy="118" r="4"/><circle cx="103" cy="326" r="4"/><circle cx="387" cy="327" r="4"/></g>
+          <g fill="#dbedd5" font-family="Consolas, monospace" font-size="11" letter-spacing="1"><text x="55" y="90">CAN / UDS</text><text x="330" y="97">AI AGENT</text><text x="46" y="352">FAIL DETECTION</text><text x="307" y="352">SAFETY FILTER</text></g>
+          <text x="240" y="395" text-anchor="middle" fill="#8fa78a" font-family="Consolas, monospace" font-size="10" letter-spacing="3">OBSERVE · VALIDATE · PROTECT</text>
+        </svg>
+        <div class="visual-bottom"><span>Automotive × AI Security</span><span>이재우의 연구 영역</span></div>
+      </div>
+    </section>
+    <div class="intro-strip wrap"><span><b>단국대학교</b> 소프트웨어학과 공학사</span><span><b>BoB 15기</b> 보안컨설팅</span><span><b>LISAthon 2025</b> 본선 진출</span></div>
+
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="projects-title">직접 만들고, 검증한 것들<span class="accent">.</span></h2></div><p class="section-aside">문제를 정의하고<br>작동하는 방식으로 풀어갑니다.</p></div>
+      <div class="filters" role="group" aria-label="프로젝트 분야 필터"><button class="filter active" data-filter="all" aria-pressed="true">전체</button><button class="filter" data-filter="automotive" aria-pressed="false">차량 보안</button><button class="filter" data-filter="ai" aria-pressed="false">AI 보안</button></div>
+      <p class="sr-only" id="filter-status" aria-live="polite">프로젝트 3개</p>
+      <div class="project-grid">
+        <article class="project featured-project" data-category="automotive">
+          <div class="project-art vehicle-art" aria-hidden="true"><span class="art-label">AUTOMOTIVE SECURITY</span><svg viewBox="0 0 460 165"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M47 110l14-41 61-11 46-31h125l43 36 58 15 17 32-7 19h-31m-49 0H156m-47 0H64l-17-19z"/><path d="M143 59l34-23h55v28H139m99-28h47l30 28h-77z"/><circle cx="132" cy="123" r="25"/><circle cx="132" cy="123" r="12"/><circle cx="349" cy="123" r="25"/><circle cx="349" cy="123" r="12"/><path d="M74 89h35M368 88h25M174 83h18M252 83h18"/></g></svg><div class="signal-row"><span>REQUEST</span><i></i><span>ECU</span><i></i><span>DTC / RESPONSE</span></div></div>
+          <div class="project-body"><div class="project-meta"><span>2025 · WHITEHAT SCHOOL</span><span class="badge">논문 공동저자</span></div><h3>UDS Fuzzer &amp;<br>다층적 Fail Detection</h3><p>실차 환경의 CAN·UDS 통신을 분석하고, DTC 응답을 활용해 이상 수준을 구분하는 퍼징 프로젝트입니다.</p><ul class="tags" aria-label="사용 기술"><li>Python</li><li>python-can</li><li>ISO-TP</li><li>DTC</li></ul><button class="project-detail" data-project="uds">담당 역할과 연구 보기 <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="project" data-category="ai">
+          <div class="project-art agent-art" aria-hidden="true"><span class="art-label">EMBODIED AI SECURITY</span><div class="agent-flow"><span>SCENE</span><i>→</i><span>PLAN</span><i>→</i><span class="guard-node">GUARD</span></div><div class="gate-line"><span class="dot"></span> VALIDATE BEFORE ACTION</div></div>
+          <div class="project-body"><div class="project-meta"><span>2026 · BOB 15기</span><span class="badge ongoing">진행 중</span></div><h3>임보디드 AI<br>Safety Filter</h3><p>장면에서 행동으로 이어지는 AI 에이전트의 경로를 검토하고, 실행 전에 안전 필터로 점검하는 연구입니다.</p><ul class="tags" aria-label="연구 분야"><li>AI Agent</li><li>Safety Filter</li><li>Plan / Action</li></ul><button class="project-detail" data-project="agent">필터 연구 살펴보기 <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="project" data-category="automotive">
+          <div class="project-art sdv-art" aria-hidden="true"><span class="art-label">SOFTWARE DEFINED VEHICLE</span><div class="ecu-map"><span>STEERING<br>FEEDBACK</span><div><i></i><i></i><i></i></div><span>AUTOSAR<br>CLASSIC</span></div><span class="sdv-caption">INTEGRATION / VALIDATION</span></div>
+          <div class="project-body"><div class="project-meta"><span>2025–2026 · MOBIUS</span><span class="badge">교육 프로젝트</span></div><h3>SDV ECU<br>통합·검증 PBL</h3><p>AUTOSAR Classic 기반 ECU 구성·통합·검증을 학습하고, Steer-by-Wire 조향 피드백·고속 통신 PBL에 참여했습니다.</p><ul class="tags" aria-label="학습 기술"><li>AUTOSAR Classic</li><li>ECU</li><li>Steer-by-Wire</li></ul><button class="project-detail" data-project="sdv">교육 프로젝트 보기 <span aria-hidden="true">↗</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="achievement wrap" id="highlights" aria-labelledby="achievement-title"><div class="achievement-symbol" aria-hidden="true">↗</div><div class="achievement-copy"><p class="eyebrow">02 / COMPETITION</p><h2 id="achievement-title">2025 LISAthon <span>본선 진출</span></h2><p>순천향대학교 주최 모빌리티 사이버보안 대회.<br>CTF 예선을 통과해 차량 기반 Attack &amp; Defense 본선에 진출했습니다.</p><div class="achievement-tags"><span>MOBILITY SECURITY</span><span>CTF FINALIST</span></div></div><div class="achievement-year" aria-hidden="true">20<br>25<span>LISAthon</span></div></section>
+
+    <section class="section wrap education-section" id="education" aria-labelledby="education-title">
+      <div class="education-intro"><p class="eyebrow">03 / EDUCATION</p><h2 id="education-title">배움이<br>연구로 이어지도록<span class="accent">.</span></h2><p>소프트웨어의 기본기를 쌓고,<br>차량과 AI 시스템의 보안으로<br>연구 범위를 넓혀왔습니다.</p><div class="education-note"><span>FOCUS AREAS</span><p>차량 사이버보안<br>AI 에이전트 안전<br>보안 분석·검증</p></div></div>
+      <div class="timeline">
+        <article class="timeline-item current"><div class="timeline-meta"><span>2026.07 — 현재</span><span class="badge ongoing">교육 중</span></div><h3>Best of the Best 15기</h3><p class="institution">보안컨설팅 트랙</p><p>임보디드 AI·Agent 필터 솔루션 프로젝트에서 안전 필터 제작을 담당하고 있습니다.</p></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2025.09 — 2026.03</span></div><h3>모비우스 SW 부트캠프 1기</h3><p class="institution">현대모비스 · 멋쟁이사자처럼</p><p>AUTOSAR Classic 기반 SDV ECU 구성·통합·검증과 Steer-by-Wire PBL을 학습했습니다.</p></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2025.08.20 — 08.22 · 21시간</span></div><h3>IoT 보안인증 심화교육</h3><p>펌웨어 추출 및 정적 분석 실습을 통해 IoT 보안 분석을 학습했습니다.</p></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2025.03 — 2025.09</span></div><h3>WhiteHat School 3기</h3><p>시스템·웹·모바일 보안의 기초부터 CAN 실습, TARA와 UDS 퍼저 개발을 경험했습니다.</p></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2020.03 — 2026.02</span><span class="badge">졸업</span></div><h3>단국대학교</h3><p class="institution">SW융합대학 소프트웨어학과 · 공학사</p><p class="gpa">학점 <strong>3.96 / 4.5</strong></p><p>컴퓨터네트워크, 운영체제보안, 정보보호이론, 시큐어코딩 등 소프트웨어·보안 과목을 이수했습니다.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="research" aria-labelledby="research-title"><div class="section-heading"><div><p class="eyebrow">04 / RESEARCH &amp; COMMUNITY</p><h2 id="research-title">기록하고, 함께 나누는 경험<span class="accent">.</span></h2></div></div><div class="record-list">
+      <article class="record"><span class="record-number">01</span><div><span class="record-type">PUBLICATION · 2026.05</span><h3>실차 환경 UDS 퍼징을 위한<br class="desktop-br"> DTC 기반 다층적 Fail Detection 기법</h3><p>한국자동차공학회 2026 춘계학술대회 · 공동저자</p></div><a class="record-link" href="https://ksae.org/journal_list/search_index.php?mode=view&amp;sid=59409" target="_blank" rel="noopener noreferrer" aria-label="UDS 퍼징 논문 한국자동차공학회에서 보기">논문 보기 <span aria-hidden="true">↗</span></a></article>
+      <article class="record"><span class="record-number">02</span><div><span class="record-type">COMMUNITY · AEGIS</span><h3>단국대학교 보안·개발 동아리 Aegis</h3><p>보안 TechTalk, Dreamhack 스터디·CTF와 코딩교육 봉사 활동.<br>2024.01–2025.01 봉사활동 담당 임원.</p></div><span class="record-tag">지식 공유</span></article>
+      <article class="record"><span class="record-number">03</span><div><span class="record-type">CERTIFICATION · 2021.12</span><h3>네트워크관리사 2급</h3><p>한국정보통신자격협회 · 네트워크 기본기와 관리 역량</p></div><span class="record-tag">자격</span></article>
+    </div></section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="wrap contact-inner"><div><p class="eyebrow">LET’S CONNECT</p><h2 id="contact-title">함께 풀어갈<br>보안 문제를 기다립니다<span>.</span></h2><p>차량 보안, AI 안전, 보안 엔지니어링에 관심이 있습니다.</p></div><div class="contact-actions"><a class="email-link" href="mailto:mps0927@gmail.com">mps0927@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-secondary"><button id="copy-email">이메일 복사</button><a href="https://github.com/mps0927" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button id="print-summary">이력 요약 저장 ↗</button></div><span class="copy-status" id="copy-status" role="status"></span></div></div></section>
+  </main>
+  <footer class="wrap footer"><span>© <span id="year">2026</span> Jaewoo Lee</span><span>Security, with evidence.</span><a href="#home">맨 위로 ↑</a></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow">PROJECT NOTES</span><button id="close-dialog" aria-label="프로젝트 상세 닫기">✕</button></div><div id="dialog-content"></div></dialog>
+  <noscript><p class="noscript-note">프로젝트 상세 보기와 분야 필터는 JavaScript를 켜면 이용할 수 있습니다. 교육 이력과 논문 링크는 그대로 확인할 수 있습니다.</p></noscript>
+</body>
+</html>
